@@ -59,18 +59,4 @@ The goal is to analyze the dataset and answer the following questions to uncover
 6. **Outlier Detection**
    - Identify outliers in cost, clicks, or revenue for further investigation.
 
-## Folder Structure
-- **ML/**: Machine learning models and notebooks
-  - `Sales_Prediction_Dataset.ipynb`: Notebook for analysis (to be updated with this data).
-- **Data/**: Raw datasets
-  - `raw_data.csv`: Online advertising performance data (to be added).
-
-## Getting Started
-1. Clone the repo: `git clone https://github.com/YourUsername/finlatics.git`
-2. Load `Data/raw_data.csv` into `ML/Sales_Prediction_Dataset.ipynb`.
-3. Follow the analysis questions above to explore the dataset.
-
-## Next Steps
-- Import the dataset into the repository.
-- Update `Sales_Prediction_Dataset.ipynb` with scripts to address the listed questions.
-- Visualize trends and correlations using Python (e.g., Pandas, Matplotlib, Seaborn).
+In addition to the code ; a presentation was made to effectively communicate the insights.
