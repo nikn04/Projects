@@ -1,4 +1,4 @@
-# Finlatics
+# Online Advertising Performance Analysis for the purpose of Digital Marketing
 A project for financial analytics and insights, focusing on online advertising performance.
 
 ## Dataset Overview
