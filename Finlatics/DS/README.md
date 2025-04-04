@@ -2,7 +2,7 @@
 A project for financial analytics and insights, focusing on online advertising performance.
 
 ## Dataset Overview
-This repository analyzes the online advertising performance of "Company X" from **April 1, 2020, to June 30, 2020**, with all transactions in US dollars. The dataset, managed by "Advert Firm A," includes metrics on ad campaigns, user interactions, and financial outcomes.
+Analyzes the online advertising performance of "Company X" from **April 1, 2020, to June 30, 2020**, with all transactions in US dollars. The dataset, managed by "Advert Firm A," includes metrics on ad campaigns, user interactions, and financial outcomes.
 
 ### Key Metrics
 - **Day**: Date of the campaign.
