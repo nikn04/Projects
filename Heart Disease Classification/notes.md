@@ -47,7 +47,7 @@ The Cleveland Heart Disease dataset (`processed.cleveland.data`) contains 303 pa
 8. **Feature Engineering:**
     * After using GridSearch to find the best hyperparameters, the final model's performance depends on how well the features represent the underlying patterns in the data. Further feature engineering at this stage would involve analyzing the feature importances provided by the decision tree, combining or transforming existing features to create new ones, or even revisiting the one-hot encoding to ensure it's optimally configured. It's an iterative process of creating, evaluating, and refining features to maximize the model's predictive power.
 
-# Hyperparameter Tuning and Model Optimization
+## Hyperparameter Tuning and Model Optimization
 
 1.  **Hyperparameter Tuning (GridSearchCV):**
     *   We performed hyperparameter tuning using `GridSearchCV` with the following grid:
