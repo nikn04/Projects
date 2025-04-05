@@ -9,7 +9,7 @@ Implements a decision tree classifier to predict heart disease using the Clevela
 The Cleveland Heart Disease dataset (`processed.cleveland.data`) contains 303 patient records with 14 attributes, including age, cholesterol, and heart disease diagnosis (`hd`, 0–4). Missing values are denoted by `?`.
 
 1.  **Library Imports:**
-    *   We began by importing essential libraries:
+    *   Importing essential libraries:
         *   `pandas` for data manipulation and DataFrame handling.
         *   `numpy` for numerical computations.
         *   `matplotlib.pyplot` for creating visualizations and plots.
@@ -20,7 +20,7 @@ The Cleveland Heart Disease dataset (`processed.cleveland.data`) contains 303 pa
         *   `confusion_matrix` and `ConfusionMatrixDisplay` from `sklearn.metrics` to analyze the model's predictions.
 
 2.  **Data Loading:**
-    *   We loaded the dataset directly from the UCI Machine Learning Repository using `pd.read_csv()`.  Since the CSV file lacked a header row, we specified `header=None`.
+    *   Loaded the dataset directly from the UCI Machine Learning Repository using `pd.read_csv()`.  Since the CSV file lacked a header row, we specified `header=None`.
 
 3.  **Data Preprocessing and Feature Engineering:**
     *   Assigned descriptive names to the columns based on the dataset's documentation for clarity.
