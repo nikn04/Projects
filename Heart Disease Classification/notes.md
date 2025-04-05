@@ -50,7 +50,7 @@ The Cleveland Heart Disease dataset (`processed.cleveland.data`) contains 303 pa
 ## Hyperparameter Tuning and Model Optimization
 
 1.  **Hyperparameter Tuning (GridSearchCV):**
-    *   We performed hyperparameter tuning using `GridSearchCV` with the following grid:
+    *   Performed hyperparameter tuning using `GridSearchCV` with the following grid:
         *   `max_depth=[3, 5, 7, 10]`
         *   `min_samples_split=[2, 5, 10]`
         *   `min_samples_leaf=[1, 2, 4]`
@@ -61,7 +61,7 @@ The Cleveland Heart Disease dataset (`processed.cleveland.data`) contains 303 pa
     *   Attempted to convert columns `ca` and `thal` to floats, but this resulted in a drop in accuracy to the `0.7833–0.8` range.
 
 3.  **Class Weights:**
-    *   To address class imbalance in the binary target variable `y` (0: 53.87%, 1: 46.13%), we added `class_weight='balanced'`.
+    *   To address class imbalance in the binary target variable `y` (0: 53.87%, 1: 46.13%), added `class_weight='balanced'`.
     *   This improved the test accuracy to `0.8267–0.83`.
 
 4.  **Cross-Validation:**
