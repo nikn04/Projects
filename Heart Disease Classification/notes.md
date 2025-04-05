@@ -50,7 +50,7 @@ The Cleveland Heart Disease dataset (`processed.cleveland.data`) contains 303 pa
 # Optimization Experiments:
 To improve beyond 0.8133, several techniques were tested:
 
-## Hyperparameter Tuning and Model Optimization
+### Hyperparameter Tuning and Model Optimization
 
 Here's a step-by-step breakdown of the hyperparameter tuning and model optimization process:
 
