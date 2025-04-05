@@ -74,11 +74,16 @@ The Cleveland Heart Disease dataset (`processed.cleveland.data`) contains 303 pa
     *   Experimented with ensembling by combining multiple decision trees using a voting classifier, resulting in an accuracy of `0.8133`.
 
 7.  **Final Push:**
-    *   Performed cross-validation on the weighted model, achieving a mean accuracy of approximately `0.79–0.81` with a test accuracy of `0.8267`.
-    *   Feature selection using `ca`, `cp`, `thal`, and `oldpeak` is pending.
-    *   Bagging with 10 weighted trees is also pending due to code fixes.
+To maximize accuracy beyond the baseline 0.8133 and stabilize or exceed the peak of 0.8267–0.83, the following refinements were applied:
+   *  Cross-Validation on Weighted Model: A 5-fold CV on a weighted decision tree (`max_depth=3`, `class_weight='balanced'`) yielded a mean CV accuracy of 0.7982, with a test accuracy of 0.8267, confirming robustness.
+   *  Feature Selection: Using only `ca`, `cp`, `thal`, `oldpeak`, test accuracy reached 0.84.
+   *  Bagging with Weighted Trees: `BaggingClassifier` with 10 weighted trees achieved a test accuracy of 0.8333.
 
 8.  **Results:**
-    *   **Baseline:** The baseline accuracy was `81.33%` using a pruned tree with `max_depth=3`.
-    *   **Best Achieved:** The best achieved accuracy was `82.67%–83%` using a weighted model with `max_depth=3` and `class_weight='balanced'`.
-    *   **Challenges:** Numeric feature conversion underperformed; deeper trees overfit; the small dataset (297 samples) limits gains beyond approximately `0.83`.
+   *  Baseline: 81.33% (pruned tree, `max_depth=3`, no class weights).
+   *  Best Achieved: 82.67% (weighted model, `max_depth=3`, `class_weight='balanced'`; peaked at 83% in some runs).
+- **Final Push Outcomes**:
+  - Weighted Model CV: Test accuracy 82.67%, CV mean 0.7982.
+  - Feature Selection: 84%.
+  - Bagging: 83.33%.
+- **Challenges**: Numeric conversion of `ca` and `thal` underperformed (0.7833–0.8); deeper trees overfit (e.g., 0.7867); small dataset (297 samples) limits gains beyond ~0.83.
