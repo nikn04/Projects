@@ -23,24 +23,24 @@ The Cleveland Heart Disease dataset (`processed.cleveland.data`) contains 303 pa
     *   We loaded the dataset directly from the UCI Machine Learning Repository using `pd.read_csv()`.  Since the CSV file lacked a header row, we specified `header=None`.
 
 3.  **Data Preprocessing and Feature Engineering:**
-    *   We assigned descriptive names to the columns based on the dataset's documentation for clarity.
-    *   We separated the dataset into feature matrix `X` (independent variables) and target variable `y` (dependent variable 'hd' for heart disease).
+    *   Assigned descriptive names to the columns based on the dataset's documentation for clarity.
+    *   Separated the dataset into feature matrix `X` (independent variables) and target variable `y` (dependent variable 'hd' for heart disease).
     *   Explored the data types and unique values in each column.
     *   Utilized one-hot encoding with `pd.get_dummies()` on categorical features (`cp`, `restecg`, `slope`, and `thal`). This converts each category into a binary column, preventing the model from assuming ordinal relationships between categories.
     *   Converted the target variable `y` into a binary classification problem (0 for no heart disease, 1 for heart disease).
 
 4.  **Data Splitting:**
-    *   We split the preprocessed data into training and testing sets using `train_test_split`. The `random_state` parameter was set to ensure reproducibility.
+    *   Split the preprocessed data into training and testing sets using `train_test_split`. The `random_state` parameter was set to ensure reproducibility.
 
 5.  **Model Building and Training:**
-    *   We initialized a `DecisionTreeClassifier` with a specified `random_state` for reproducibility.
-    *   We trained the decision tree model using the training data (`X_train`, `y_train`) with the `.fit()` method.
+    *   Initialized a `DecisionTreeClassifier` with a specified `random_state` for reproducibility.
+    *   Trained the decision tree model using the training data (`X_train`, `y_train`) with the `.fit()` method.
 
 6.  **Visualization:**
-    *   We visualized the decision tree using `plot_tree`, which provides insights into the model's decision-making process.
+    *   Visualized the decision tree using `plot_tree`, which provides insights into the model's decision-making process.
 
 7.  **Evaluation and Tuning:**
-    *   We used a confusion matrix to evaluate the performance of the classification model.
+    *   Used a confusion matrix to evaluate the performance of the classification model.
     *   Used cross validation to see how accurate the model is.
     *   Used Grid Search CV to find the best parameters for the model and improve the accuracy.
 
@@ -52,8 +52,6 @@ To improve beyond 0.8133, several techniques were tested:
 
 ## Hyperparameter Tuning and Model Optimization
 
-Here's a step-by-step breakdown of the hyperparameter tuning and model optimization process:
-
 1.  **Hyperparameter Tuning (GridSearchCV):**
     *   We performed hyperparameter tuning using `GridSearchCV` with the following grid:
         *   `max_depth=[3, 5, 7, 10]`
@@ -63,23 +61,23 @@ Here's a step-by-step breakdown of the hyperparameter tuning and model optimizat
     *   However, the test accuracy was `0.7733`, indicating potential overfitting.
 
 2.  **Feature Engineering:**
-    *   We attempted to convert columns `ca` and `thal` to floats, but this resulted in a drop in accuracy to the `0.7833–0.8` range.
+    *   Attempted to convert columns `ca` and `thal` to floats, but this resulted in a drop in accuracy to the `0.7833–0.8` range.
 
 3.  **Class Weights:**
     *   To address class imbalance in the binary target variable `y` (0: 53.87%, 1: 46.13%), we added `class_weight='balanced'`.
     *   This improved the test accuracy to `0.8267–0.83`.
 
 4.  **Cross-Validation:**
-    *   We conducted 5-fold cross-validation on a pruned model, achieving a mean accuracy of `0.7945` with a standard deviation of `0.0603`.
+    *   Conducted 5-fold cross-validation on a pruned model, achieving a mean accuracy of `0.7945` with a standard deviation of `0.0603`.
 
 5.  **Expanded Tuning:**
-    *   We expanded the tuning grid to include `criterion='entropy'`, which yielded the same best test result of `0.8267`.
+    *   Expanded the tuning grid to include `criterion='entropy'`, which yielded the same best test result of `0.8267`.
 
 6.  **Ensemble Methods:**
-    *   We experimented with ensembling by combining multiple decision trees using a voting classifier, resulting in an accuracy of `0.8133`.
+    *   Experimented with ensembling by combining multiple decision trees using a voting classifier, resulting in an accuracy of `0.8133`.
 
 7.  **Final Push:**
-    *   We performed cross-validation on the weighted model, achieving a mean accuracy of approximately `0.79–0.81` with a test accuracy of `0.8267`.
+    *   Performed cross-validation on the weighted model, achieving a mean accuracy of approximately `0.79–0.81` with a test accuracy of `0.8267`.
     *   Feature selection using `ca`, `cp`, `thal`, and `oldpeak` is pending.
     *   Bagging with 10 weighted trees is also pending due to code fixes.
 
