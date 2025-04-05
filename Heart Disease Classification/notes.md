@@ -3,7 +3,7 @@
 
 ** Implementing Decision Trees: **
 
-Implements a decision tree classifier to predict heart disease using the Cleveland Heart Disease dataset from the UCI Machine Learning Repository. The project starts with data preprocessing to handle missing values, followed by training a pruned decision tree, evaluating its performance, and experimenting with advanced techniques to optimize accuracy. The baseline pruned model achieves a test accuracy of 81.33%, with later enhancements reaching up to 82.67%.
+Implements a decision tree classifier to predict heart disease using the Cleveland Heart Disease dataset from the UCI Machine Learning Repository. The project starts with data preprocessing to handle missing values, followed by training a pruned decision tree, evaluating its performance, and experimenting with advanced techniques to optimize accuracy. The baseline pruned model achieves a test accuracy of 81.33%, with later enhancements reaching up to 84%.
 
 ## Dataset
 The Cleveland Heart Disease dataset (`processed.cleveland.data`) contains 303 patient records with 14 attributes, including age, cholesterol, and heart disease diagnosis (`hd`, 0–4). Missing values are denoted by `?`.
