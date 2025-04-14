@@ -77,11 +77,9 @@ BizBuzz is a Python project that performs **sentiment analysis** on posts from 4
 
 - **Runtime**: ~6-7 minutes on a standard CPU (e.g., 4-core i5/i7, 8GB RAM).
 - **4chan API**: Respects rate limits (1 request/sec). Retries on failures.
-- **Content Warning**: `/biz/` posts can be explicit or sensitive (e.g., financial rants, memes). Review `sentiments_full.txt` before sharing.
+- **Content Warning**: `/biz/` posts can be explicit or sensitive (e.g., financial rants, memes).
 - **Customization**:
-  - Change board: Edit `main.py` to use `fetch_4chan_posts(board="g")` for tech discussions.
   - Reduce posts: Set `max_posts=500` in `main.py` for faster runs (~3-4 min).
-  - CSV output: Modify `save_results.py` to save as CSV (see comments).
 
 ## Troubleshooting
 
